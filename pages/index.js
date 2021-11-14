@@ -45,10 +45,10 @@ function HomePage() {
 		<div style={{backgroundColor: "DarkOrange",height: "700px"}}>
 		<Head style>
   			<title>Reludehcs-Scheduler</title>
-  			<link rel="icon" href="https://i1.wp.com/utdesports.com/wp-content/uploads/2018/12/cropped-UTDmono_OL_flame.png?fit=576%2C576&ssl=1" />
+  			<link rel="icon" href="https://cdn.discordapp.com/attachments/906299935970959420/909428961128357928/unknown-removebg-preview.png" />
 		</Head>
 		
-		<h1 style={{fontSize: "50px",textAlign: "center",color: "green",backgroundColor: "DarkOrange"}}>Reludehcs-Scheduler</h1>
+		<h1 style={{fontSize: "50px",textAlign: "center",color: "green",backgroundColor: "DarkOrange",font:"serif"}}>Reludehcs-Scheduler</h1>
 		{/*
 		<FormControl id="amount">
   			<FormLabel>Number of Classes</FormLabel>
@@ -114,7 +114,7 @@ function HomePage() {
 				<a style= {{textAlign: "center",color: "white"}}>Submit</a>
 		</Box>
 		</div>
-		
+		<Image style={{width:"10%"}} text="center" boxSize="100px" src="https://cdn.discordapp.com/attachments/906299935970959420/909428961128357928/unknown-removebg-preview.png"/>
 		</div>
 		</>
 	)
