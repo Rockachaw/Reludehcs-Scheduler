@@ -25,6 +25,18 @@ import { urlObjectKeys } from 'next/dist/shared/lib/utils'
 
 function HomePage() {			
 
+	var url = new URL("http://localhost:3000/hello");
+
+	const submit = () => {
+		url.searchParams.append('class1', document.getElementById('class1').value);
+		url.searchParams.append('class2', document.getElementById('class2').value);
+		url.searchParams.append('class3', document.getElementById('class3').value);
+		url.searchParams.append('class4', document.getElementById('class4').value);
+		url.searchParams.append('class5', document.getElementById('class5').value);
+		url.searchParams.append('class6', document.getElementById('class6').value);
+		window.location.href = url;
+	}
+
 	return(
 		<>
 		<Box style={{backgroundImage: "url(https://ospa.utdallas.edu/ospa/files/utdallas-15718735-1100.jpg)",backgroundColor: "darkorange",height: "380px"}}>
@@ -66,43 +78,40 @@ function HomePage() {
 		*/}
 		<div >
 		<VStack>
-		<FormControl id1="class1">
+		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 1</FormLabel>
-  		<Input type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class1" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
-		<FormControl id="class2">
+		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 2</FormLabel>
-  		<Input type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class2" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
-		<FormControl id="class3">
+		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 3</FormLabel>
-  		<Input type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}} />
+  		<Input id="class3" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}} />
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
-		<FormControl id="class4">
+		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 4</FormLabel>
-  		<Input type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class4" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
-		<FormControl id="class5">
+		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 5</FormLabel>
-  		<Input type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class5" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
-		<FormControl id="class6">
+		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 6</FormLabel>
-  		<Input type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class6" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
 		</VStack>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
-		<Box style={{position: "absolute",right:"610px"}}w="60px" h="40px" bg="green" borderRadius="1g">
-				<Link href="https://www.google.com/">
-          		
+		<Box onClick={() => submit()} style={{position: "absolute",right:"610px"}}w="60px" h="40px" bg="green" borderRadius="1g">
 				<a style= {{textAlign: "center"}}>Submit</a>
-        		</Link>
 		</Box>
 		</div>
 		
