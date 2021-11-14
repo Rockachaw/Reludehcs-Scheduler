@@ -44,11 +44,11 @@ function HomePage() {
 		</Box>
 		<div style={{backgroundColor: "DarkOrange",height: "700px"}}>
 		<Head style>
-  			<title>Reludehcs-Scheduler</title>
+  			<title>Reludehcs Scheduler</title>
   			<link rel="icon" href="https://cdn.discordapp.com/attachments/906299935970959420/909428961128357928/unknown-removebg-preview.png" />
 		</Head>
 		
-		<h1 style={{fontSize: "50px",textAlign: "center",color: "green",backgroundColor: "DarkOrange",font:"serif"}}>Reludehcs-Scheduler</h1>
+		<h1 style={{fontSize: "50px",textAlign: "center",color: "green",backgroundColor: "DarkOrange", fontFamily: "Serif"}}>Reludehcs Scheduler</h1>
 		{/*
 		<FormControl id="amount">
   			<FormLabel>Number of Classes</FormLabel>
