@@ -44,11 +44,11 @@ function HomePage() {
 		</Box>
 		<div style={{backgroundColor: "DarkOrange",height: "700px"}}>
 		<Head style>
-  			<title>Reldehcs-Scheduler</title>
+  			<title>Reludehcs-Scheduler</title>
   			<link rel="icon" href="https://i1.wp.com/utdesports.com/wp-content/uploads/2018/12/cropped-UTDmono_OL_flame.png?fit=576%2C576&ssl=1" />
 		</Head>
 		
-		<h1 style={{fontSize: "50px",textAlign: "center",color: "green",backgroundColor: "DarkOrange"}}>Reldehcs-Scheduler</h1>
+		<h1 style={{fontSize: "50px",textAlign: "center",color: "green",backgroundColor: "DarkOrange"}}>Reludehcs-Scheduler</h1>
 		{/*
 		<FormControl id="amount">
   			<FormLabel>Number of Classes</FormLabel>
