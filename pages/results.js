@@ -5,6 +5,92 @@ import { Image } from "@chakra-ui/react"
 import { Box } from "@chakra-ui/react"
 
 export default function Home() {
+
+  const [data, setData] = React.useState('[{}]');
+    const [data2, setData2] = React.useState('[{}]');
+    const [data3, setData3] = React.useState('[{}]');
+    const [data4, setData4] = React.useState('[{}]');
+    const [data5, setData5] = React.useState('[{}]');
+    const [data6, setData6] = React.useState('[{}]');
+    var classData = [];
+
+    React.useEffect(() => {
+        const fetchData = async () => {
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", "dd1h55UQUb8x5nQIPW2iJ1ABaIDx9iv7");
+        
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders,
+                redirect: 'follow'
+            };
+        
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            var class1 = urlParams.get("class1").split(" ");
+            var class2 = urlParams.get("class2").split(" ");
+            var class3 = urlParams.get("class3").split(" ");
+            var class4 = urlParams.get("class4").split(" ");
+            var class5 = urlParams.get("class5").split(" ");
+            var class6 = urlParams.get("class6").split(" ");
+
+
+
+            fetch("https://floating-sea-33671.herokuapp.com/https://api.utdnebula.com/v1/sections/search?course_number="+class1[1]+"&course_prefix="+class1[0], requestOptions)
+              .then(response => response.text())
+              .then(data => setData(data))
+              .catch(error => console.log('error', error));
+
+            fetch("https://floating-sea-33671.herokuapp.com/https://api.utdnebula.com/v1/sections/search?course_number="+class2[1]+"&course_prefix="+class2[0], requestOptions)
+              .then(response => response.text())
+              .then(data2 => setData2(data2))
+              .catch(error => console.log('error', error));
+
+            fetch("https://floating-sea-33671.herokuapp.com/https://api.utdnebula.com/v1/sections/search?course_number="+class3[1]+"&course_prefix="+class3[0], requestOptions)
+              .then(response => response.text())
+              .then(data3 => setData3(data3))
+              .catch(error => console.log('error', error));
+
+            fetch("https://floating-sea-33671.herokuapp.com/https://api.utdnebula.com/v1/sections/search?course_number="+class4[1]+"&course_prefix="+class4[0], requestOptions)
+              .then(response => response.text())
+              .then(data4 => setData4(data4))
+              .catch(error => console.log('error', error));
+
+            fetch("https://floating-sea-33671.herokuapp.com/https://api.utdnebula.com/v1/sections/search?course_number="+class5[1]+"&course_prefix="+class5[0], requestOptions)
+              .then(response => response.text())
+              .then(data5 => setData5(data5))
+              .catch(error => console.log('error', error));
+
+            fetch("https://floating-sea-33671.herokuapp.com/https://api.utdnebula.com/v1/sections/search?course_number="+class6[1]+"&course_prefix="+class6[0], requestOptions)
+              .then(response => response.text())
+              .then(data6 => setData6(data6))
+              .catch(error => console.log('error', error));
+
+
+        }
+        const test = (data) => {
+          console.log(data);
+          //console.log(JSON.parse(data)[0].instructors)
+        }
+
+        /*const updateData = (data) => {
+          classData.push(data)
+          setData(data)
+        }*/
+
+        /*const chooseBestProf = (classData) => {
+            //var json = JSON.parse(classData);
+            //var bestProf = {};
+            //bestProf.instructor = json[0].instructors
+            console.log(classData[0]);
+            console.log(classData[1]);
+            setData(classData[0]);
+
+        }*/
+    
+        fetchData();
+  }, []);
+
   return (
 <div style = {{backgroundColor: 'darkorange'}}>
     <div className={styles.container}>
@@ -26,72 +112,79 @@ export default function Home() {
         <div className={styles.grid}>
           <a style = {{color: 'green', backgroundColor: 'white'}} className={styles.card}>
     
-            <h2>CLASS1</h2>
-            <p>PROFESSOR: Professor A</p>
-            <p>Professor's RateMyProfessor Ranking: A</p>
+            <h2>{JSON.parse(data)[0].title}</h2>
+            <p>Professor: {JSON.parse(data)[0].instructors}</p>
+            <p>Professor's RateMyProfessor Ranking: 5</p>
             <p>Professor's Average Grade: A</p>
-            <p>Timings:</p>
-            <p>Monday: 3:00 PM - 4:15 PM</p>
-            <p>Wednesday: 3:00 PM - 4:15 PM</p>
+            <p>Sections: {JSON.parse(data)[0].section_name}</p>
+            <p>Days: {JSON.parse(data)[0].days}</p>
+            <p>Times: {JSON.parse(data)[0].times}</p>
+            <p>Locations: {JSON.parse(data)[0].location}</p>
           </a>        
         </div>
 
         <div className={styles.grid}>
           <a style = {{color: 'green', backgroundColor: 'white'}} className={styles.card}>
-            <h2>CLASS2</h2>
-            <p>PROFESSOR: Professor B</p>
-            <p>Professor's RateMyProfessor Ranking: B</p>
-            <p>Professor's Average Grade: B</p>
-            <p>Timings:</p>
-            <p>Tuesday: 3:00 PM - 4:15 PM</p>
-            <p>Thursday: 3:00 PM - 4:15 PM</p>
+          <h2>{JSON.parse(data2)[0].title}</h2>
+            <p>Professor: {JSON.parse(data2)[0].instructors}</p>
+            <p>Professor's RateMyProfessor Ranking: 5</p>
+            <p>Professor's Average Grade: A</p>
+            <p>Sections: {JSON.parse(data2)[0].section_name}</p>
+            <p>Days: {JSON.parse(data2)[0].days}</p>
+            <p>Times: {JSON.parse(data2)[0].times}</p>
+            <p>Locations: {JSON.parse(data2)[0].location}</p>
           </a>        
         </div>
 
         <div className={styles.grid}>
           <a style = {{color: 'green', backgroundColor: 'white'}} className={styles.card}>
-            <h2>CLASS3</h2>
-            <p>PROFESSOR: Professor C</p>
-            <p>Professor's RateMyProfessor Ranking: C</p>
-            <p>Professor's Average Grade: C</p>
-            <p>Timings:</p>
-            <p>Friday: 3:00 PM - 4:15 PM</p>
+          <h2>{JSON.parse(data3)[0].title}</h2>
+            <p>Professor: {JSON.parse(data3)[0].instructors}</p>
+            <p>Professor's RateMyProfessor Ranking: 5</p>
+            <p>Professor's Average Grade: A</p>
+            <p>Sections: {JSON.parse(data3)[0].section_name}</p>
+            <p>Days: {JSON.parse(data3)[0].days}</p>
+            <p>Times: {JSON.parse(data3)[0].times}</p>
+            <p>Locations: {JSON.parse(data3)[0].location}</p>
           </a>        
         </div>
 
         <div className={styles.grid}>
           <a style = {{color: 'green', backgroundColor: 'white'}} className={styles.card}>
-            <h2>CLASS4</h2>
-            <p>PROFESSOR: Professor B</p>
-            <p>Professor's RateMyProfessor Ranking: B</p>
-            <p>Professor's Average Grade: B</p>
-            <p>Timings:</p>
-            <p>Tuesday: 3:00 PM - 4:15 PM</p>
-            <p>Thursday: 3:00 PM - 4:15 PM</p>
+          <h2>{JSON.parse(data4)[0].title}</h2>
+            <p>Professor: {JSON.parse(data4)[0].instructors}</p>
+            <p>Professor's RateMyProfessor Ranking: 5</p>
+            <p>Professor's Average Grade: A</p>
+            <p>Sections: {JSON.parse(data4)[0].section_name}</p>
+            <p>Days: {JSON.parse(data4)[0].days}</p>
+            <p>Times: {JSON.parse(data4)[0].times}</p>
+            <p>Locations: {JSON.parse(data4)[0].location}</p>
           </a>        
         </div>
 
         <div className={styles.grid}>
           <a style = {{color: 'green', backgroundColor: 'white'}} className={styles.card}>
-            <h2>CLASS5</h2>
-            <p>PROFESSOR: Professor B</p>
-            <p>Professor's RateMyProfessor Ranking: B</p>
-            <p>Professor's Average Grade: B</p>
-            <p>Timings:</p>
-            <p>Tuesday: 3:00 PM - 4:15 PM</p>
-            <p>Thursday: 3:00 PM - 4:15 PM</p>
+          <h2>{JSON.parse(data5)[0].title}</h2>
+            <p>Professor: {JSON.parse(data5)[0].instructors}</p>
+            <p>Professor's RateMyProfessor Ranking: 5</p>
+            <p>Professor's Average Grade: A</p>
+            <p>Sections: {JSON.parse(data5)[0].section_name}</p>
+            <p>Days: {JSON.parse(data5)[0].days}</p>
+            <p>Times: {JSON.parse(data5)[0].times}</p>
+            <p>Locations: {JSON.parse(data5)[0].location}</p>
           </a>        
         </div>
 
         <div className={styles.grid}>
           <a style = {{color: 'green', backgroundColor: 'white'}} className={styles.card}>
-            <h2>CLASS6</h2>
-            <p>PROFESSOR: Professor B</p>
-            <p>Professor's RateMyProfessor Ranking: B</p>
-            <p>Professor's Average Grade: B</p>
-            <p>Timings:</p>
-            <p>Tuesday: 3:00 PM - 4:15 PM</p>
-            <p>Thursday: 3:00 PM - 4:15 PM</p>
+          <h2>{JSON.parse(data6)[0].title}</h2>
+            <p>Professor: {JSON.parse(data6)[0].instructors}</p>
+            <p>Professor's RateMyProfessor Ranking: 5</p>
+            <p>Professor's Average Grade: A</p>
+            <p>Sections: {JSON.parse(data6)[0].section_name}</p>
+            <p>Days: {JSON.parse(data6)[0].days}</p>
+            <p>Times: {JSON.parse(data6)[0].times}</p>
+            <p>Locations: {JSON.parse(data6)[0].location}</p>
           </a>        
         </div>
       </main>

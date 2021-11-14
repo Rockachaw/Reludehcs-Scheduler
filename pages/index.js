@@ -25,7 +25,7 @@ import { urlObjectKeys } from 'next/dist/shared/lib/utils'
 
 function HomePage() {			
 
-	var url = new URL("http://localhost:3000/hello");
+	var url = new URL("http://localhost:3000/results");
 
 	const submit = () => {
 		url.searchParams.append('class1', document.getElementById('class1').value);
