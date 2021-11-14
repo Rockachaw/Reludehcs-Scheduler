@@ -110,8 +110,8 @@ function HomePage() {
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
 		</VStack>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
-		<Box onClick={() => submit()} style={{position: "absolute",right:"730px"}}w="60px" h="40px" bg="green" borderRadius="1g">
-				<a style= {{textAlign: "center"}}>Submit</a>
+		<Box onClick={() => submit()} style={{position: "absolute",right:"730px",borderRadius: 10}}w="60px" h="40px" bg="green" borderRadius="1g">
+				<a style= {{textAlign: "center",color: "white"}}>Submit</a>
 		</Box>
 		</div>
 		
