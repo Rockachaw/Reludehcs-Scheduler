@@ -80,37 +80,37 @@ function HomePage() {
 		<VStack>
 		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 1</FormLabel>
-  		<Input id="class1" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class1" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "330px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
 		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 2</FormLabel>
-  		<Input id="class2" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class2" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "330px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
 		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 3</FormLabel>
-  		<Input id="class3" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}} />
+  		<Input id="class3" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "330px"}} />
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
 		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 4</FormLabel>
-  		<Input id="class4" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class4" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "330px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
 		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 5</FormLabel>
-  		<Input id="class5" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class5" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "330px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
 		<FormControl>
   		<FormLabel style={{color: "green", textAlign: "center"}}>Enter Class 6</FormLabel>
-  		<Input id="class6" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "220px"}}/>
+  		<Input id="class6" type="class" style={{maxWidth: "800px", backgroundColor: "white", position: "absolute",right: "330px"}}/>
 		</FormControl>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
 		</VStack>
 		<a style={{color: "DarkOrange"}}>______________________________________________________________________________________</a>
-		<Box onClick={() => submit()} style={{position: "absolute",right:"610px"}}w="60px" h="40px" bg="green" borderRadius="1g">
+		<Box onClick={() => submit()} style={{position: "absolute",right:"730px"}}w="60px" h="40px" bg="green" borderRadius="1g">
 				<a style= {{textAlign: "center"}}>Submit</a>
 		</Box>
 		</div>
